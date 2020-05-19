@@ -18,9 +18,11 @@ const Main = () => {
     }
     const eventHandler = () =>{
         window.removeEventListener('mousewheel', scrollHandler)
+        window.removeEventListener('touchmove', scrollHandler)
 
         setTimeout(()=>{
             window.addEventListener('mousewheel', scrollHandler)
+            window.addEventListener('touchmove', scrollHandler)
         }, 500)
     }
 
@@ -42,6 +44,7 @@ const Main = () => {
     useEffect(()=>{
         
         window.addEventListener('mousewheel', scrollHandler)
+        window.addEventListener('touchmove', scrollHandler)
     
     },[])
 
