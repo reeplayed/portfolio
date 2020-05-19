@@ -40,11 +40,26 @@ const Main = () => {
             eventHandler()
         }
     }
+
+    const scrollHandler2 = (e) =>{
+            document.body.style.height = '12px';
+        if(e.deltaY>0 && page.current<8){
+            page.current += 1
+            setCurrentSection(prev=>prev+1);
+            eventHandler()
+        }
+        else if(e.deltaY<0 && page.current>1){
+            page.current -= 1
+            console.log('bot')
+            setCurrentSection(prev=>prev-1);
+            eventHandler()
+        }
+    }
     
     useEffect(()=>{
         
         window.addEventListener('mousewheel', scrollHandler)
-        window.addEventListener('touchmove', scrollHandler)
+        window.addEventListener('touchmove', scrollHandler2)
     
     },[])
 
