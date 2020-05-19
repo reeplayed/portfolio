@@ -12,7 +12,9 @@ const Project = ({id, currSection, title, image, github, sidelink, description})
 
     const bigShape = document.getElementsByClassName(`shape-${id}`);
     const footerShape = document.getElementsByClassName(`footer-shape-${id}`);
-
+    
+    
+    
     const animationHandler = () =>{
         tl.from(bigShape[0], 1, {x: '100%'})
         .from(bigShape[1], 0.8, {x: '100%'}, "-=1")

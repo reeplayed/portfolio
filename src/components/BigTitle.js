@@ -55,6 +55,7 @@ const BigShape = styled.div`
     display: flex;
     align-items: center;
     padding-left: 120px;
+   
 
     @media(max-width: 1000px){
         width: 700px;
