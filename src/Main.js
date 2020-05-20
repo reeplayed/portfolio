@@ -7,7 +7,7 @@ import Background from './components/Background';
 import Project from './sections/Project';
 import projects from './projects';
 import Curtain from './components/Curtain';
-var flag;
+
 const Main = () => {
 
     const [currentSection, setCurrentSection] = useState(1)
@@ -45,21 +45,25 @@ const Main = () => {
         }
     }
 
-    const scrollMobileHandler = (e) =>{
-        
-        // if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
-        if(flag > e.touches[0].clientY ){
-            page.current += 1
-            setCurrentSection(prev=>prev+1);
-        }
-        // else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
-        else if(flag < e.touches[0].clientY){
-            page.current -= 1            
-            setCurrentSection(prev=>prev-1);
-        }
-    }
+    
 
     useEffect(()=>{
+        var flag;
+
+
+        const scrollMobileHandler = (e) =>{
+        
+            // if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
+            if(flag > e.touches[0].clientY ){
+                page.current += 1
+                setCurrentSection(prev=>prev+1);
+            }
+            // else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
+            else if(flag < e.touches[0].clientY){
+                page.current -= 1            
+                setCurrentSection(prev=>prev-1);
+            }
+        }
         
         window.addEventListener('mousewheel', scrollHandler)
         window.addEventListener('touchstart', (e)=>{
