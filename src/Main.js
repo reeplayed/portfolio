@@ -12,9 +12,9 @@ const Main = () => {
 
     const [currentSection, setCurrentSection] = useState(1)
     const page = useRef(1)
-    const mobileDelta = useRef()
+    const mobileDelta = useRef(0)
 
-    const [test, setTest] = useState(null)
+    
 
     const navigationHandler = (p) =>{
         page.current = p
@@ -45,25 +45,26 @@ const Main = () => {
         }
         else if(e.deltaY<0 && page.current>1){
             page.current -= 1
-            console.log('bot')
             setCurrentSection(prev=>prev-1);
             eventHandler()
         }
     }
 
     const scrollMobileHandler = (e) =>{
-        setCurrentSection(2);
-        // if(e.touches.deltaY>0 && page.current<8){
-        //     page.current += 1
-        //     setCurrentSection(prev=>prev+1);
-        //     eventMobileHandler()
-        // }
-        // else if(e.touches.deltaY<0 && page.current>1){
-        //     page.current -= 1
-        //     console.log('bot')
-        //     setCurrentSection(prev=>prev-1);
-        //     eventMobileHandler()
-        // }
+        
+        if(e.originalEvent.touches[0].clientY>mobileDelta.current && page.current<8){
+            page.current += 1
+            mobileDelta.current=e.originalEvent.touches[0].clientY
+            setCurrentSection(prev=>prev+1);
+            eventMobileHandler()
+        }
+        else if(e.originalEvent.touches[0].clientY<mobileDelta.current && page.current>1){
+            page.current -= 1
+            mobileDelta.current=e.originalEvent.touches[0].clientY
+            
+            setCurrentSection(prev=>prev-1);
+            eventMobileHandler()
+        }
     }
 
     useEffect(()=>{
