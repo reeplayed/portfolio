@@ -13,17 +13,25 @@ const Main = () => {
     const [currentSection, setCurrentSection] = useState(1)
     const page = useRef(1)
 
+    const [test, setTest] = useState(null)
+
     const navigationHandler = (p) =>{
         page.current = p
         setCurrentSection(p);
     }
     const eventHandler = () =>{
         window.removeEventListener('mousewheel', scrollHandler)
-        window.removeEventListener('touchmove', scrollHandler)
 
         setTimeout(()=>{
             window.addEventListener('mousewheel', scrollHandler)
-            window.addEventListener('touchmove', scrollHandler)
+        }, 500)
+    }
+
+    const eventMobileHandler = () =>{
+        window.removeEventListener('touchmove', scrollMobileHandler)
+
+        setTimeout(()=>{
+            window.addEventListener('touchmove', scrollMobileHandler)
         }, 500)
     }
 
@@ -42,10 +50,25 @@ const Main = () => {
         }
     }
 
+    const scrollMobileHandler = (e) =>{
+            
+        if(e.touches.deltaY>0 && page.current<8){
+            page.current += 1
+            setCurrentSection(prev=>prev+1);
+            eventMobileHandler()
+        }
+        else if(e.touches.deltaY<0 && page.current>1){
+            page.current -= 1
+            console.log('bot')
+            setCurrentSection(prev=>prev-1);
+            eventMobileHandler()
+        }
+    }
+
     useEffect(()=>{
         
         window.addEventListener('mousewheel', scrollHandler)
-        window.addEventListener('touchmove', scrollHandler)
+        window.addEventListener('touchmove', scrollMobileHandler)
     
     },[])
 
@@ -66,6 +89,7 @@ const Main = () => {
         <MainContainer>
             <Curtain/>
             <NavBar navHandler={navigationHandler}/>
+            {test}
             <Background/>
             <ScrollContainer
                 id='scroll-container' 
