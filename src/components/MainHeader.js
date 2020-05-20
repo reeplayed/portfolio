@@ -1,6 +1,5 @@
 import React, { Component, useEffect } from 'react';
 import styled from 'styled-components';
-import {TweenMax, TimelineMax, SteppedEase, Power4, Back, Elastic, Bounce} from 'gsap';
 import ShapeFooter from './ShapeFooter';
 
 const MainHeader = ({id}) => {
