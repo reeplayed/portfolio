@@ -12,6 +12,7 @@ const Main = () => {
 
     const [currentSection, setCurrentSection] = useState(1)
     const page = useRef(1)
+    const mobileDelta = useRef()
 
     const [test, setTest] = useState(null)
 
@@ -51,18 +52,18 @@ const Main = () => {
     }
 
     const scrollMobileHandler = (e) =>{
-            setTest(e.originalEvent.touches[0].clientY)
-        if(e.touches.deltaY>0 && page.current<8){
-            page.current += 1
-            setCurrentSection(prev=>prev+1);
-            eventMobileHandler()
-        }
-        else if(e.touches.deltaY<0 && page.current>1){
-            page.current -= 1
-            console.log('bot')
-            setCurrentSection(prev=>prev-1);
-            eventMobileHandler()
-        }
+        setCurrentSection(2);
+        // if(e.touches.deltaY>0 && page.current<8){
+        //     page.current += 1
+        //     setCurrentSection(prev=>prev+1);
+        //     eventMobileHandler()
+        // }
+        // else if(e.touches.deltaY<0 && page.current>1){
+        //     page.current -= 1
+        //     console.log('bot')
+        //     setCurrentSection(prev=>prev-1);
+        //     eventMobileHandler()
+        // }
     }
 
     useEffect(()=>{
@@ -89,7 +90,6 @@ const Main = () => {
         <MainContainer>
             <Curtain/>
             <NavBar navHandler={navigationHandler}/>
-            {test+'f'}
             <Background/>
             <ScrollContainer
                 id='scroll-container' 
