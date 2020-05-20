@@ -29,7 +29,7 @@ const Background = () => {
             x: '-80%'
         })
 
-        tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
+        // tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
        
 
     },[])

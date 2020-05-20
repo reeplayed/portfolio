@@ -54,7 +54,7 @@ export default [
         "id": "ckaczn98804dv0159cqsv4uei",
         "title": "Alta arte",
         "sidelink": "https://github.com/schriker/vivid",
-        "description": "It’s my first fullstack project written in React and Python, so we can see many bad practices in the code. There are also some difficult elements like transfer cart from local storage after sign in, dynamic filters or url cleaner. \n",
+        "description": "It’s my first front-end project written in React and Python, so we can see many bad practices in the code. There are also some difficult elements like transfer cart from local storage after sign in, dynamic filters or url cleaner. \n",
         "image": alta
       },
   ]
