@@ -89,7 +89,7 @@ const Main = () => {
         <MainContainer>
             <Curtain/>
             <NavBar navHandler={navigationHandler}/>
-            {test}
+            {test+'f'}
             <Background/>
             <ScrollContainer
                 id='scroll-container' 
