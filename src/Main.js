@@ -29,17 +29,19 @@ const Main = () => {
         }, 500)
     }
 
-   
+ 
 
     const scrollHandler = (e) =>{
             
         if(e.deltaY>0 && page.current<8){
             page.current += 1
             setCurrentSection(prev=>prev+1);
+            eventHandler()
         }
         else if(e.deltaY<0 && page.current>1){
             page.current -= 1
             setCurrentSection(prev=>prev-1);
+            eventHandler()
         }
     }
 
@@ -48,12 +50,10 @@ const Main = () => {
         if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
             page.current += 1
             setCurrentSection(prev=>prev+1);
-            eventMobileHandler()
         }
         else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
             page.current -= 1            
             setCurrentSection(prev=>prev-1);
-            eventMobileHandler()
         }
     }
 
