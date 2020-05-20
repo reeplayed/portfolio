@@ -51,16 +51,16 @@ const Main = () => {
     }
 
     const scrollMobileHandler = (e) =>{
-        setTest(e.originalEvent.touches[0].clientY)
-        if(e.originalEvent.touches[0].clientY>mobileDelta.current && page.current<8){
+        setTest(e.touches[0].clientY)
+        if(e.touches[0].clientY>mobileDelta.current && page.current<8){
             page.current += 1
-            mobileDelta.current=e.originalEvent.touches[0].clientY
+            mobileDelta.current=e.touches[0].clientY
             setCurrentSection(prev=>prev+1);
             eventMobileHandler()
         }
-        else if(e.originalEvent.touches[0].clientY<mobileDelta.current && page.current>1){
+        else if(e.touches[0].clientY<mobileDelta.current && page.current>1){
             page.current -= 1
-            mobileDelta.current=e.originalEvent.touches[0].clientY
+            mobileDelta.current=e.touches[0].clientY
             
             setCurrentSection(prev=>prev-1);
             eventMobileHandler()
