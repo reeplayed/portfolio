@@ -12,7 +12,8 @@ const Main = () => {
 
     const [currentSection, setCurrentSection] = useState(1)
     const page = useRef(1)
-    const mobileDelta = useRef(0)
+    const mobileTouchStart = useRef()
+    const mobileTouchEnd = useRef()
 
     const [test, setTest] = useState(null)
 
@@ -28,40 +29,29 @@ const Main = () => {
         }, 500)
     }
 
-    const eventMobileHandler = () =>{
-        window.removeEventListener('touchmove', scrollMobileHandler)
-
-        setTimeout(()=>{
-            window.addEventListener('touchmove', scrollMobileHandler)
-        }, 500)
-    }
+   
 
     const scrollHandler = (e) =>{
             
         if(e.deltaY>0 && page.current<8){
             page.current += 1
             setCurrentSection(prev=>prev+1);
-            eventHandler()
         }
         else if(e.deltaY<0 && page.current>1){
             page.current -= 1
             setCurrentSection(prev=>prev-1);
-            eventHandler()
         }
     }
 
     const scrollMobileHandler = (e) =>{
-        setTest(e.touches[0].clientY)
-        if(e.touches[0].clientY>mobileDelta.current && page.current<8){
+        
+        if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
             page.current += 1
-            mobileDelta.current=e.touches[0].clientY
             setCurrentSection(prev=>prev+1);
             eventMobileHandler()
         }
-        else if(e.touches[0].clientY<mobileDelta.current && page.current>1){
-            page.current -= 1
-            mobileDelta.current=e.touches[0].clientY
-            
+        else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
+            page.current -= 1            
             setCurrentSection(prev=>prev-1);
             eventMobileHandler()
         }
@@ -70,7 +60,10 @@ const Main = () => {
     useEffect(()=>{
         
         window.addEventListener('mousewheel', scrollHandler)
-        window.addEventListener('touchmove', scrollMobileHandler)
+        window.addEventListener('touchstart', (e)=>{
+            mobileTouchStart.current = e.touches[0].clientY
+        })
+        window.addEventListener('touchend', scrollMobileHandler)
     
     },[])
 
