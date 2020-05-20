@@ -47,11 +47,13 @@ const Main = () => {
 
     const scrollMobileHandler = (e) =>{
         
-        if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
+        // if(mobileTouchStart.current > e.touches[0].clientY+5 && page.current<8){
+        if(mobileTouchStart.current > e.touches[0].clientY+5 ){
             page.current += 1
             setCurrentSection(prev=>prev+1);
         }
-        else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
+        // else if(mobileTouchStart.current < e.touches[0].clientY-5 && page.current>1){
+        else if(mobileTouchStart.current < e.touches[0].clientY-5){
             page.current -= 1            
             setCurrentSection(prev=>prev-1);
         }
