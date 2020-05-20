@@ -19,18 +19,19 @@ const Background = () => {
             i.style.transform = `translate(-50%, 190%) rotate(${_.random(0, 360)}deg`
         })
 
-        
+        setTimeout(()=>{
+            
+            TweenMax.to(sec, 1, {
+                x: '-40%'
+            })
+    
+            TweenMax.to(thir, 1, {
+                x: '-80%'
+            })
+    
+            tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
 
-        TweenMax.to(sec, 1, {
-            x: '-40%'
-        })
-
-        TweenMax.to(thir, 1, {
-            x: '-80%'
-        })
-
-        // tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
-       
+        }, 900)
 
     },[])
 
@@ -48,9 +49,6 @@ const Background = () => {
             <Line className='line_1'/>
             <Line className='line_1'/>
           
-            
-         
-            
             <LastBlock
                 id='last_block'
             />

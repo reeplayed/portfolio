@@ -16,7 +16,6 @@ const Logo = () => {
 
     return (
         <Container>
-            
 
             <Typography red className='logo-letter'>
                 Ł
@@ -25,6 +24,7 @@ const Logo = () => {
                 B
             </Typography>
             <Shape id='logo-shape'/>
+            
         </Container>
     );
 }
@@ -53,43 +53,6 @@ const Shape = styled.div`
     background: ${({theme})=>theme.colors.purple_light};
     box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.4);
 `;
-const BigShape = styled.div`
-    position: absolute;
-    width: 900px;
-    height: 170px;
-    right: 0;
-    background: ${({theme})=>theme.colors.purple_dark};
-    z-index: 99;
-    border-radius: 400px 0 0 400px;
-    box-shadow: ${({theme})=>theme.shadows.shape};
-    display: flex;
-    align-items: center;
-    padding-left: 120px;
-`;
 
-const SmallShape = styled.div`
-    position: absolute;
-    width: 300px;
-    height: 120px;
-    right: 0;
-    top: 120px;
-    background: ${({theme})=>theme.colors.purple_light};
-    box-shadow: ${({theme})=>theme.shadows.shape};
-    z-index: 99;
-    
-    border-radius: 400px 0 0 400px;
-`;
-const RedShape = styled.div`
-    position: absolute;
-    width: 600px;
-    height: 60px;
-    right: 40px;
-    top: 140px;
-    background: ${({theme})=>theme.colors.red};
-    z-index: 99;
-    
-    border-radius: 400px;
-    box-shadow: ${({theme})=>theme.shadows.shape};
-`;
 
 export default Logo;

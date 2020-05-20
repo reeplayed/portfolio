@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Background from './components/Background';
 import Project from './sections/Project';
 import projects from './projects';
+import Curtain from './components/Curtain';
 
 const Main = () => {
 
@@ -41,25 +42,10 @@ const Main = () => {
         }
     }
 
-    const scrollHandler2 = (e) =>{
-            document.body.style.height = '12px';
-        if(e.deltaY>0 && page.current<8){
-            page.current += 1
-            setCurrentSection(prev=>prev+1);
-            eventHandler()
-        }
-        else if(e.deltaY<0 && page.current>1){
-            page.current -= 1
-            console.log('bot')
-            setCurrentSection(prev=>prev-1);
-            eventHandler()
-        }
-    }
-    
     useEffect(()=>{
         
         window.addEventListener('mousewheel', scrollHandler)
-        window.addEventListener('touchmove', scrollHandler2)
+        window.addEventListener('touchmove', scrollHandler)
     
     },[])
 
@@ -78,7 +64,7 @@ const Main = () => {
 
     return (
         <MainContainer>
-            
+            <Curtain/>
             <NavBar navHandler={navigationHandler}/>
             <Background/>
             <ScrollContainer

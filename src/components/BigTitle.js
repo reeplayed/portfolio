@@ -31,9 +31,9 @@ const Container = styled.div`
     position: absolute;
     width: 400px;
     height: 300px;
-    // background: red;
     right: 0;
     top: 80px;
+
     @media(max-width: 800px){
         top: 90px;
     }
@@ -56,7 +56,6 @@ const BigShape = styled.div`
     align-items: center;
     padding-left: 120px;
    
-
     @media(max-width: 1000px){
         width: 700px;
         height: 150px;

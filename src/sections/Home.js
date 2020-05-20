@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import BigTitle from '../components/BigTitle';
 import MainHeader from '../components/MainHeader';
 import styled from 'styled-components';
 import {TweenMax, Bounce, TimelineMax} from 'gsap';
 
 const Home = ({id, currSection}) => {
+
+    const ref = useRef(false)
 
     const tl = new TimelineMax()
 
@@ -24,9 +26,18 @@ const Home = ({id, currSection}) => {
     }
 
     useEffect(()=>{
-        if(currSection===1){
-            animationHandler()
+        if(ref.current){
+            if(currSection===1){
+                animationHandler()
+            }
         }
+        else{
+            setTimeout(()=>{
+                animationHandler()
+            }, 900)
+            ref.current = true;
+        }
+
      },[currSection])
 
     return (

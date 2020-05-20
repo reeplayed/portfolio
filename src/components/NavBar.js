@@ -16,27 +16,6 @@ const NavBar = ({navHandler}) => {
     return (
         <Container>
             <Logo/>
-            {/* <ItemsContainer >
-                <Item 
-                    className='nav-item'
-                    onClick={()=>navHandler(1)}
-                >
-                    Home
-                </Item>
-                <Item 
-                    className='nav-item'
-                    onClick={()=>navHandler(2)}
-                >
-                    About
-                </Item>
-               
-                <Item 
-                    className='nav-item'
-                    onClick={()=>navHandler(3)}
-                >
-                    Projects
-                </Item>
-            </ItemsContainer> */}
         </Container>
     );
 };
@@ -44,12 +23,10 @@ const NavBar = ({navHandler}) => {
 const Container = styled.header`
     position: fixed;
     width: 100%;
-    padding: 15px 60px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 9999;
-
+    z-index: 999;
 `;
 
 const ItemsContainer = styled.ul`
