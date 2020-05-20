@@ -57,7 +57,7 @@ const DescriptionContainer = styled.div`
     }
     @media(max-width: 460px){
         bottom: 30px;
-        left: 30px;
+        left: 40px;
     }
 `;
 const TexContainer = styled.div`

@@ -76,7 +76,7 @@ const DescriptionContainer = styled.div`
     }
     @media(max-width: 460px){
         bottom: 30px;
-        left: 25px;
+        left: 40px;
     }
 `;
 const TexContainer = styled.div`

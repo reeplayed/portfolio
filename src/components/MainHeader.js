@@ -81,7 +81,7 @@ const Container = styled.div`
         left: 50px;
     }
     @media(max-width: 460px){
-       left: 30px;
+       left: 40px;
        bottom: 20px;
        width: 300px;
         height: 200px;
