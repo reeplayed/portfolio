@@ -4,7 +4,7 @@ import MainHeader from '../components/MainHeader';
 import styled from 'styled-components';
 import {TweenMax, Bounce, TimelineMax} from 'gsap';
 
-const Home = ({id, currSection}) => {
+const Home = ({id, currSection, test}) => {
 
     const ref = useRef(false)
 
@@ -43,7 +43,7 @@ const Home = ({id, currSection}) => {
     return (
         <Container>
             <BigTitle
-                title='Portfolio'
+                title={test}
                 id={id}
             />
             <MainHeader id={id}/>

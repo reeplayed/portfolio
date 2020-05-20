@@ -14,7 +14,7 @@ const Main = () => {
     const page = useRef(1)
     const mobileDelta = useRef(0)
 
-    
+    const [test, setTest] = useState(null)
 
     const navigationHandler = (p) =>{
         page.current = p
@@ -51,7 +51,7 @@ const Main = () => {
     }
 
     const scrollMobileHandler = (e) =>{
-        
+        setTest(e.originalEvent.touches[0].clientY)
         if(e.originalEvent.touches[0].clientY>mobileDelta.current && page.current<8){
             page.current += 1
             mobileDelta.current=e.originalEvent.touches[0].clientY
@@ -96,7 +96,7 @@ const Main = () => {
                 id='scroll-container' 
                 page={currentSection}
             >
-                <Home id='port' currSection={currentSection}/>
+                <Home id='port' currSection={currentSection} test={test}/>
                 <About id='about' currSection={currentSection}/>
                 {Projects}
             </ScrollContainer>
