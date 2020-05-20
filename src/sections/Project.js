@@ -37,7 +37,7 @@ const Project = ({id, currSection, title, image, github, sidelink, description})
             />
             <DescriptionContainer>
                 <Wrapper>
-                    <a href={sidelink}>
+                    <a href={sidelink} target="_blank">
                         <ImgWrapper>
                             <ImgInner>
                                 <Filter/>
