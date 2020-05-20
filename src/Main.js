@@ -51,7 +51,7 @@ const Main = () => {
     }
 
     const scrollMobileHandler = (e) =>{
-            
+            setTest(e.originalEvent.touches[0].clientY)
         if(e.touches.deltaY>0 && page.current<8){
             page.current += 1
             setCurrentSection(prev=>prev+1);
