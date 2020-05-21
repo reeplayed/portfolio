@@ -36,7 +36,9 @@ const Background = () => {
     },[])
 
     return (
-        <>  
+        <Container>  
+            <Wrapper>
+
             <Line className='line_1'/>
             <Line className='line_1'/>
             <Line className='line_1'/>
@@ -62,12 +64,22 @@ const Background = () => {
             <FrontBlock
                 id='front_block'
             />
-        </>
+            </Wrapper>
+        </Container>
     );
 };
-
-const FrontBlock = styled.div`
+const Container = styled.div`
     position: fixed;
+    width: 100%;
+    height: 100vh;
+`;
+const Wrapper = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100vh;
+`;
+const FrontBlock = styled.div`
+    position: absolute;
     width: 13%;
     height: 100%;
     left: 35%;
@@ -75,7 +87,7 @@ const FrontBlock = styled.div`
     background: #1F3061;
 `;
 const SecBlock = styled.div`
-    position: fixed;
+    position: absolute;
     width: 15%;
     height: 100%;
     left: 30%;
@@ -83,7 +95,7 @@ const SecBlock = styled.div`
     background: #1A2953;
 `;
 const ThirBlock = styled.div`
-    position: fixed;
+    position: absolute;
     width: 16%;
     height: 100%;
     left: 24%;
@@ -91,7 +103,7 @@ const ThirBlock = styled.div`
     background: #18274E;
 `;
 const LastBlock = styled.div`
-    position: fixed;
+    position: absolute;
     width: 30%;
     height: 100%;
     left: 0px;
@@ -100,7 +112,7 @@ const LastBlock = styled.div`
 `;
 
 const Line = styled.div`
-position: fixed;
+position: absolute;
 width: 200%;
 height: 1px;
 z-index: 0;

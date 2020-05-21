@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React from 'react';
 import Home from './sections/Home';
 import About from './sections/About';
 import NavBar from './components/NavBar';
@@ -23,21 +23,15 @@ const Main = () => {
     ))
 
     return (
-        <MainContainer>
-            <Curtain/>
-            <NavBar/>
+        <>
             <Background/>
+            <Curtain/>
+            <NavBar />
             <Home id='port' />
             <About id='about'/>
             {Projects}
-        </MainContainer>
+        </>
     );
 };
-
-const MainContainer = styled.main`
-    width: 100%;
-    overflow-x: hidden;
-`;
-
 
 export default Main

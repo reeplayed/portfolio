@@ -31,7 +31,7 @@ const Curtain = () => {
 }
 
 const Container = styled.div`
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     display: flex;

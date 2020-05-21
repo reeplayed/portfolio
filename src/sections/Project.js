@@ -65,6 +65,8 @@ const Project = ({id, currSection, title, image, github, sidelink, description})
 const Container = styled.div`
     position: relative;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
 `;
 const DescriptionContainer = styled.div`
     position: absolute;
