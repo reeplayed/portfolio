@@ -68,8 +68,8 @@ const Container = styled.div`
 `;
 const DescriptionContainer = styled.div`
     position: absolute;
-    bottom: 40px;
-    left: 150px;
+    bottom: 4px;
+    left: 100px;
     @media(max-width: 1000px){
         bottom: 40px;
         left: 50px;
@@ -88,13 +88,19 @@ const TextContainer = styled.div`
     text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.7);
     padding: 15px 0px;
     line-height: 28px;
-    width: 700px;
-    @media(max-width: 800px){
+    width: 870px;
+    @media(max-width: 1000px){
         font-size: 20px;
+        width: 700px;
+    }
+    @media(max-width: 800px){
+        font-size: 15px;
         width: 500px;
+        line-height: 20px;
+
     }
     @media(max-width: 600px){
-        font-size: 18px;
+        font-size: 14px;
         width: 300px;
         line-height: 20px;
     }

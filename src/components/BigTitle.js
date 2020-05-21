@@ -32,7 +32,7 @@ const Container = styled.div`
     width: 400px;
     height: 300px;
     right: 0;
-    top: 80px;
+    top: 60px;
 
     @media(max-width: 800px){
         top: 90px;
