@@ -14,7 +14,6 @@ const Main = () => {
         <Project 
             key={item.id}
             id={index+3} 
-            currSection={currentSection}
             title={item.title} 
             image={item.image} 
             description={item.description} 
@@ -26,7 +25,7 @@ const Main = () => {
     return (
         <MainContainer>
             <Curtain/>
-            <NavBar navHandler={navigationHandler}/>
+            <NavBar/>
             <Background/>
             <Home id='port' />
             <About id='about'/>
