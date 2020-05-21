@@ -45,7 +45,7 @@ const About = ({id, currSection}) => {
 
 const Container = styled.div`
     position: relative;
-    height: ${100/8}%;
+    height: 100vh;
 `;
 const DescriptionContainer = styled.div`
     position: absolute;
