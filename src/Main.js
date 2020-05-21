@@ -35,9 +35,7 @@ const Main = () => {
 };
 
 const MainContainer = styled.main`
-    height: 100vh;
     width: 100%;
-    position: relative;
     overflow-x: hidden;
 `;
 
