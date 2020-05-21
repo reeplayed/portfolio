@@ -28,8 +28,8 @@ const Main = () => {
             <Curtain/>
             <NavBar navHandler={navigationHandler}/>
             <Background/>
-            <Home id='port' currSection={currentSection}/>
-            <About id='about' currSection={currentSection}/>
+            <Home id='port' />
+            <About id='about'/>
             {Projects}
         </MainContainer>
     );
