@@ -70,7 +70,7 @@ const Container = styled.div`
 `;
 const DescriptionContainer = styled.div`
     position: absolute;
-    bottom: 4px;
+    bottom: 15px;
     left: 100px;
     @media(max-width: 1000px){
         bottom: 40px;
