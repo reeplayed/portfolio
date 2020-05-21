@@ -53,9 +53,9 @@ const Project = ({id, currSection, title, image, github, sidelink, description})
                         </a>
                     </GithubIconWrapper>
                 </Wrapper>
-                <TexContainer>
+                <TextContainer>
                     {description}
-                </TexContainer>
+                </TextContainer>
                 <ShapeFooter id={id}/>
             </DescriptionContainer>
         </Container>
@@ -79,7 +79,7 @@ const DescriptionContainer = styled.div`
         left: 40px;
     }
 `;
-const TexContainer = styled.div`
+const TextContainer = styled.div`
     color:white;
     font-style: normal;
     font-weight: 600;

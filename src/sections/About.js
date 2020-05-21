@@ -88,7 +88,6 @@ const TexContainer = styled.div`
 `;
 const Typography = styled.span`
     color: ${({theme})=>theme.colors.red};
-
     text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.7);
 `;
 
