@@ -54,11 +54,11 @@ const Main = () => {
 
     useEffect(()=>{
         
-        window.addEventListener('mousewheel', scrollHandler)
-        window.addEventListener('touchstart', (e)=>{
-            mobileTouchStart.current = e.touches[0].clientY
-        })
-        window.addEventListener('touchend', scrollMobileHandler)
+        // window.addEventListener('mousewheel', scrollHandler)
+        // window.addEventListener('touchstart', (e)=>{
+        //     mobileTouchStart.current = e.touches[0].clientY
+        // })
+        // window.addEventListener('touchend', scrollMobileHandler)
     
     },[])
 
@@ -96,7 +96,7 @@ const MainContainer = styled.main`
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 `;
 const ScrollContainer = styled.div`
     

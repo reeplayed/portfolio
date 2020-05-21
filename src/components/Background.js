@@ -67,7 +67,7 @@ const Background = () => {
 };
 
 const FrontBlock = styled.div`
-    position: absolute;
+    position: fixed;
     width: 13%;
     height: 100%;
     left: 35%;
@@ -75,7 +75,7 @@ const FrontBlock = styled.div`
     background: #1F3061;
 `;
 const SecBlock = styled.div`
-    position: absolute;
+    position: fixed;
     width: 15%;
     height: 100%;
     left: 30%;
@@ -83,7 +83,7 @@ const SecBlock = styled.div`
     background: #1A2953;
 `;
 const ThirBlock = styled.div`
-    position: absolute;
+    position: fixed;
     width: 16%;
     height: 100%;
     left: 24%;
@@ -91,7 +91,7 @@ const ThirBlock = styled.div`
     background: #18274E;
 `;
 const LastBlock = styled.div`
-    position: absolute;
+    position: fixed;
     width: 30%;
     height: 100%;
     left: 0px;
@@ -100,7 +100,7 @@ const LastBlock = styled.div`
 `;
 
 const Line = styled.div`
-position: absolute;
+position: fixed;
 width: 200%;
 height: 1px;
 z-index: 0;
