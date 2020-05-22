@@ -38,6 +38,9 @@ const Container = styled.div`
     @media(max-width: 800px){
         top: 90px;
     }
+    @media(max-width: 600px){
+        top: 70px;
+    }
 `;
 const ContainerInner = styled.div`
     position: relative;

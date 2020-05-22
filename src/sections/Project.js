@@ -73,7 +73,7 @@ const TextContainer = styled.div`
     padding: 15px 0px;
     line-height: 28px;
     width: 870px;
-    
+
     @media(max-width: 1000px){
         font-size: 20px;
         width: 700px;
@@ -90,7 +90,7 @@ const TextContainer = styled.div`
         line-height: 20px;
     }
     @media(max-width: 460px){
-        font-size: 18px;
+        font-size: 12px;
         width: 280px;
         line-height: 20px;
         padding: 10px 0px;
