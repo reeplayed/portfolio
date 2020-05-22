@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, {useEffect } from 'react';
 import styled from 'styled-components';
 import {TweenMax} from 'gsap';
 
@@ -7,7 +6,7 @@ const Curtain = () => {
     
     useEffect(()=>{
 
-        const curtain = document.getElementById('curtin');
+        const curtain = document.getElementById('curtain');
         const curtain_letter = document.getElementsByClassName('curtain_letter')
 
         TweenMax.to(curtain, 0.5, {opacity: 0, delay: 1})
@@ -19,7 +18,7 @@ const Curtain = () => {
     },[])
 
     return (
-        <Container id='curtin'>
+        <Container id='curtain'>
             <Typography red className='curtain_letter'>
                 Ł
             </Typography>
@@ -48,7 +47,5 @@ const Typography = styled.span`
     font-size: 1.7rem;
     padding: 0 5px;
 `;
-
-
 
 export default Curtain;

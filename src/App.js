@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import GlobalStyles from './GlobalStyle';
 import {ThemeProvider} from 'styled-components'

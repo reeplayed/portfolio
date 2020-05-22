@@ -23,15 +23,19 @@ const Main = () => {
     ))
 
     return (
-        <>
+        <Container>
             <Background/>
             <Curtain/>
             <NavBar />
-            <Home id='port' />
+            <Home id='home' />
             <About id='about'/>
             {Projects}
-        </>
+        </Container>
     );
 };
+
+const Container = styled.div`
+    padding-bottom: 25px;
+`;
 
 export default Main

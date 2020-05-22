@@ -1,17 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import {TimelineMax} from 'gsap';
 import Logo from './Logo';
 
-const NavBar = ({navHandler}) => {
-
-    useEffect(()=>{
-        const items = document.getElementsByClassName('nav-item')
-        const tl = new TimelineMax()
- 
-        tl.staggerFrom(items, 1, { opacity: 0 }, 0.25)
-         
-     },[])
+const NavBar = () => {
 
     return (
         <Container>

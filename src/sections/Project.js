@@ -1,33 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import BigTitle from '../components/BigTitle';
 import ShapeFooter from '../components/ShapeFooter';
 import styled from 'styled-components';
-import {TimelineMax} from 'gsap';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import IconButton from '@material-ui/core/IconButton';
 
-const Project = ({id, currSection, title, image, github, sidelink, description}) => {
-
-    const tl = new TimelineMax()
-
-    const bigShape = document.getElementsByClassName(`shape-${id}`);
-    const footerShape = document.getElementsByClassName(`footer-shape-${id}`);
-    
-    
-    
-    const animationHandler = () =>{
-        tl.from(bigShape[0], 1, {x: '100%'})
-        .from(bigShape[1], 0.8, {x: '100%'}, "-=1")
-        .from(bigShape[2], 0.8, {x: '120%', delay: 0.3}, "-=1")
-        .from(footerShape[0], 0.6, {scaleX: 0}, "-=1")
-        .from(footerShape[1], 0.6, {scaleX:0, delay: 0.3}, "-=1")
-    }
-
-    useEffect(()=>{
-        if(currSection===id){
-            animationHandler()
-        }
-     },[currSection])
+const Project = ({id, title, image, github, sidelink, description}) => {
 
     return (
         <Container>
@@ -38,7 +16,9 @@ const Project = ({id, currSection, title, image, github, sidelink, description})
             <DescriptionContainer>
                 <Wrapper>
                     <a href={sidelink} target="_blank">
-                        <ImgWrapper>
+                        <ImgWrapper
+                            data-aos="zoom-in-right"
+                        >
                             <ImgInner>
                                 <Filter/>
                                 <Img src={image}/>
@@ -70,12 +50,14 @@ const Container = styled.div`
 `;
 const DescriptionContainer = styled.div`
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     left: 100px;
+
     @media(max-width: 1000px){
         bottom: 40px;
         left: 50px;
     }
+
     @media(max-width: 460px){
         bottom: 30px;
         left: 40px;
@@ -124,6 +106,7 @@ const ImgWrapper = styled.div`
     border: 5px solid #2f2f51;
     top: -195px;
     left: 20px;
+   
     @media(max-width: 600px){
         width: 300px;
         height: 170px;
@@ -134,8 +117,9 @@ const ImgWrapper = styled.div`
     }
 `;
 const ImgInner = styled.div`
-position: relative;
-    width: 100%;
+    display: flex;
+    position: relative;
+    width: 100.01%;
     height: 100%;
     overflow: hidden;
 `;
@@ -148,9 +132,10 @@ const Img = styled.img`
 `;
 const Filter = styled.div`
     position:absolute;
-    width: 200%;
-    height: 200%;
-    // left: 20px;
+    width: 150%;
+    height: 120%;
+    left: 40%;
+    top: 30%;
     transform:  translateX(-350px) rotate(40deg);
     z-index: 9;
     background:rgb(228, 63, 90, 0.3);

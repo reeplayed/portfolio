@@ -2,28 +2,14 @@ import React, {useEffect} from 'react';
 import BigTitle from '../components/BigTitle';
 import ShapeFooter from '../components/ShapeFooter';
 import styled from 'styled-components';
-import {TweenMax, Bounce, TimelineMax} from 'gsap';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
-const About = ({id, currSection}) => {
-
-    const tl = new TimelineMax()
-
-    const bigShape = document.getElementsByClassName(`shape-${id}`);
-    const footerShape = document.getElementsByClassName(`footer-shape-${id}`);
-
-    const animationHandler = () =>{
-        tl.from(bigShape[0], 1, {x: '100%'})
-        .from(bigShape[1], 0.8, {x: '100%'}, "-=1")
-        .from(bigShape[2], 0.8, {x: '120%', delay: 0.3}, "-=1")
-        .from(footerShape[0], 0.6, {scaleX: 0}, "-=1")
-        .from(footerShape[1], 0.6, {scaleX:0, delay: 0.3}, "-=1")
-    }
+const About = ({id}) => {
 
     useEffect(()=>{
-        if(currSection===2){
-            animationHandler()
-        }
-     },[currSection])
+       Aos.init({duration: 700})
+     },[])
 
     return (
         <Container>

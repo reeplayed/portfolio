@@ -30,6 +30,8 @@ const Background = () => {
             })
     
             tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
+                .to(line, 0.5, {boxShadow: '0px 0px 30px rgba(255, 255, 255, 0.6)'})
+                .to(line, 0.5, {boxShadow: '0px 0px 10px rgba(255, 255, 255, 0.6)'})
 
         }, 900)
 
@@ -112,13 +114,12 @@ const LastBlock = styled.div`
 `;
 
 const Line = styled.div`
-position: absolute;
-width: 200%;
-height: 1px;
-z-index: 0;
-background: #9494B8;
-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
-top: 50%;
+    position: absolute;
+    width: 200%;
+    height: 1px;
+    z-index: 0;
+    background: #9494B8;
+    top: 50%;
 `;
 
 export default Background;

@@ -2,11 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import BigTitle from '../components/BigTitle';
 import MainHeader from '../components/MainHeader';
 import styled from 'styled-components';
-import {TweenMax, Bounce, TimelineMax} from 'gsap';
+import {Bounce, TimelineMax} from 'gsap';
 
-const Home = ({id, currSection}) => {
-
-    const ref = useRef(false)
+const Home = ({id}) => {
 
     const tl = new TimelineMax()
 
@@ -26,19 +24,12 @@ const Home = ({id, currSection}) => {
     }
 
     useEffect(()=>{
-        if(ref.current){
-            if(currSection===1){
-                animationHandler()
-            }
-        }
-        else{
-            setTimeout(()=>{
-                animationHandler()
-            }, 900)
-            ref.current = true;
-        }
-
-     },[currSection])
+       
+        setTimeout(()=>{
+            animationHandler()
+        }, 900)   
+    
+    },[])
 
     return (
         <Container>
@@ -56,8 +47,6 @@ const Container = styled.div`
     height: 100vh;
     width: 100%;
     overflow: hidden;
-
 `;
-
 
 export default Home;

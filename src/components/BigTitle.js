@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 
@@ -6,10 +6,11 @@ const BigTitle = ({title, id}) => {
 
     return (
         <Container>
-            <ContainerInner>
+            <ContainerInner 
+                data-aos={id!=='home' && 'fade-left'}
+            >
                 <BigShape
-                    id={`big-shape-${id}`}
-                    className={`shape-${id}`}
+                    className={`shape-${id}`}    
                 >
                     <Typography>
                         {title}

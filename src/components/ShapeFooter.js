@@ -3,7 +3,10 @@ import styled from 'styled-components';
 
 const ShapeFooter = ({id}) => {
     return (
-        <ShapesContainer>
+        <ShapesContainer
+            data-aos={id!=='home' && 'fade-right'}
+            data-aos-offset="10"
+        >
             <BigShape className={`footer-shape-${id}`}/>
             <SmallShape className={`footer-shape-${id}`}/>
         </ShapesContainer>

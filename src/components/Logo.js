@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import {TweenMax} from 'gsap';
 
@@ -48,7 +47,6 @@ const Shape = styled.div`
     width: 42px;
     height: 70%;
     left: 15px;
-
     border-radius: 0 40px 40px 0;
     background: ${({theme})=>theme.colors.purple_light};
     box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.4);
