@@ -21,7 +21,7 @@ const About = ({id}) => {
                 <TexContainer>
                     Hello, I am <Typography>22 years</Typography> old 
                     student of Finance and Accounting. About a one year ago i decided to learn programming.
-                    In my projects I combine the world of Frontend and Backend using technologies such as Django and React.
+                    In my projects I connect the world of Frontend and Backend using technologies such as Django and React.
                 </TexContainer>
                 <ShapeFooter id={id}/>
             </DescriptionContainer>
