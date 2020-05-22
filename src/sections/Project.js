@@ -73,6 +73,7 @@ const TextContainer = styled.div`
     padding: 15px 0px;
     line-height: 28px;
     width: 870px;
+    
     @media(max-width: 1000px){
         font-size: 20px;
         width: 700px;
