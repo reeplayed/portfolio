@@ -30,9 +30,8 @@ const Background = () => {
             })
     
             tl.staggerFrom(line, 1, { scaleX : 0}, 0.08)
-                .to(line, 0.5, {boxShadow: '0px 0px 30px rgba(255, 255, 255, 0.6)'})
-                .to(line, 0.5, {boxShadow: '0px 0px 10px rgba(255, 255, 255, 0.6)'})
-
+                // .to(line, 0.5, {boxShadow: '0px 0px 30px rgba(255, 255, 255, 0.6)'})
+                // .to(line, 0.5, {boxShadow: '0px 0px 10px rgba(255, 255, 255, 0.6)'})
         }, 900)
 
     },[])
