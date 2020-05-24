@@ -18,7 +18,7 @@ export default [
         "github": 'https://github.com/reeplayed/portfolio',
         "id": "ckad12l8004l8011666q4utg9",
         "title": "Portfolio",
-        "sidelink": 'https://flamboyant-swirles-1de99d.netlify.app',
+        "sidelink": 'https://lukaszborkowski.netlify.app',
         "description": "Main goal was learn GSAP and presentation my projects. \n",
         "image": portfolio
     },
